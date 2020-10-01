@@ -1,0 +1,34 @@
+{
+  "kind": "collectionType",
+  "connection": "default",
+  "collectionName": "pages_pages",
+  "info": {
+    "name": "page",
+    "description": ""
+  },
+  "options": {
+    "timestamps": true,
+    "increments": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "string"
+    },
+    "content": {
+      "type": "richtext"
+    },
+    "children": {
+      "plugin": "pages",
+      "collection": "page",
+      "via": "parent"
+    },
+    "parent": {
+      "plugin": "pages",
+      "model": "page",
+      "via": "children"
+    }
+  }
+}
