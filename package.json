@@ -3,25 +3,36 @@
   "private": true,
   "version": "0.1.0",
   "description": "A Strapi application",
+  "jest": {
+    "testPathIgnorePatterns": [
+      "/node_modules/",
+      ".tmp",
+      ".cache"
+    ],
+    "testEnvironment": "node"
+  },
   "scripts": {
     "develop": "strapi develop",
     "start": "strapi start",
     "build": "strapi build",
-    "strapi": "strapi"
+    "strapi": "strapi",
+    "test": "jest --forceExit --detectOpenHandles"
   },
   "devDependencies": {},
   "dependencies": {
+    "jest": "26.4.2",
+    "knex": "<0.20.0",
+    "slugify": "1.4.5",
+    "sqlite3": "latest",
     "strapi": "3.1.6",
     "strapi-admin": "3.1.6",
-    "strapi-utils": "3.1.6",
-    "strapi-plugin-content-type-builder": "3.1.6",
+    "strapi-connector-bookshelf": "3.1.6",
     "strapi-plugin-content-manager": "3.1.6",
-    "strapi-plugin-users-permissions": "3.1.6",
+    "strapi-plugin-content-type-builder": "3.1.6",
     "strapi-plugin-email": "3.1.6",
     "strapi-plugin-upload": "3.1.6",
-    "strapi-connector-bookshelf": "3.1.6",
-    "knex": "<0.20.0",
-    "sqlite3": "latest"
+    "strapi-plugin-users-permissions": "3.1.6",
+    "strapi-utils": "3.1.6"
   },
   "author": {
     "name": "A Strapi developer"
